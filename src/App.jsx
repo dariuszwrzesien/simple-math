@@ -7,7 +7,7 @@ import {
 } from "./data/multiplication";
 
 const RANGE = 30;
-const IMG_PATH = "/simple-math/src/assets/";
+const IMG_PATH = "/src/assets/";
 const IMG_PATH_CORRECT = `${IMG_PATH}correct.png`;
 const IMG_PATH_WRONG = `${IMG_PATH}wrong.png`;
 const IMG_PATH_QUESTION = `${IMG_PATH}question.png`;
@@ -106,7 +106,7 @@ function App() {
               alt="Question"
               style={{ width: "200px", height: "200px" }}
             />
-            <span style={{ fontSize: "20px", color: "green" }}>
+            <span style={{ fontSize: "20px", color: "#44b4f4" }}>
               Pomóż mi rozwiązać zadanie
             </span>
           </div>
