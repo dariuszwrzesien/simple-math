@@ -7,6 +7,10 @@ import {
 } from "./data/multiplication";
 
 const RANGE = 30;
+const IMG_PATH = "/simple-math/src/assets/";
+const IMG_PATH_CORRECT = `${IMG_PATH}correct.png`;
+const IMG_PATH_WRONG = `${IMG_PATH}wrong.png`;
+const IMG_PATH_QUESTION = `${IMG_PATH}question.png`;
 
 const data = [
   ...multiplicationData({ range: RANGE }),
@@ -59,7 +63,7 @@ function App() {
               }}
             >
               <img
-                src="/src/assets/correct.png"
+                src={IMG_PATH_CORRECT}
                 alt="Correct Answer"
                 style={{ width: "200px", height: "200px" }}
               />
@@ -77,7 +81,7 @@ function App() {
               }}
             >
               <img
-                src="/src/assets/wrong.png"
+                src={IMG_PATH_WRONG}
                 alt="Incorrect Answer"
                 style={{ width: "200px", height: "200px" }}
               />
@@ -87,6 +91,26 @@ function App() {
             </div>
           )}
         </div>
+        {isCorrect === null && (
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              gap: "20px",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <img
+              src={IMG_PATH_QUESTION}
+              alt="Question"
+              style={{ width: "200px", height: "200px" }}
+            />
+            <span style={{ fontSize: "20px", color: "green" }}>
+              Pomóż mi rozwiązać zadanie
+            </span>
+          </div>
+        )}
         <form ref={formRef} onSubmit={(e) => handleSubmit(e)}>
           <div
             style={{
