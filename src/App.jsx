@@ -7,7 +7,7 @@ import {
 } from "./data/multiplication";
 
 const RANGE = 30;
-const IMG_PATH = "/src/assets/";
+const IMG_PATH = "";
 const IMG_PATH_CORRECT = `${IMG_PATH}correct.png`;
 const IMG_PATH_WRONG = `${IMG_PATH}wrong.png`;
 const IMG_PATH_QUESTION = `${IMG_PATH}question.png`;
