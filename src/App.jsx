@@ -12,6 +12,12 @@ const IMG_PATH_CORRECT = `${IMG_PATH}correct.png`;
 const IMG_PATH_WRONG = `${IMG_PATH}wrong.png`;
 const IMG_PATH_QUESTION = `${IMG_PATH}question.png`;
 
+const IMG_STYLE = {
+  height: "200px",
+  borderWidth: "5px",
+  borderColor: "#fff",
+};
+
 const data = [
   ...multiplicationData({ range: RANGE }),
   ...divisionData({ range: RANGE }),
@@ -65,7 +71,7 @@ function App() {
               <img
                 src={IMG_PATH_CORRECT}
                 alt="Correct Answer"
-                style={{ width: "200px", height: "200px" }}
+                style={IMG_STYLE}
               />
               <span style={{ fontSize: "20px", color: "green" }}>DOBRZE</span>
             </div>
@@ -83,7 +89,7 @@ function App() {
               <img
                 src={IMG_PATH_WRONG}
                 alt="Incorrect Answer"
-                style={{ width: "200px", height: "200px" }}
+                style={IMG_STYLE}
               />
               <span style={{ fontSize: "20px", color: "#f4f745" }}>
                 Spróbuj jeszcze raz
@@ -101,11 +107,7 @@ function App() {
               alignItems: "center",
             }}
           >
-            <img
-              src={IMG_PATH_QUESTION}
-              alt="Question"
-              style={{ width: "200px", height: "200px" }}
-            />
+            <img src={IMG_PATH_QUESTION} alt="Question" style={IMG_STYLE} />
             <span style={{ fontSize: "20px", color: "#44b4f4" }}>
               Pomóż mi rozwiązać zadanie
             </span>
